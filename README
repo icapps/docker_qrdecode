@@ -1,5 +1,5 @@
 Simple dockerized process that takes an image and returns the decoded information.
-Supports image formats and pdfs. PDFs need to have de .pdf extension
+Supports image formats and pdfs. PDFs need to have the .pdf extension
 
 Example:
 curl -X POST -H "Content-Type: multipart/form-data" -F "data=@test/1.png" http://localhost:3000/qrdecode
