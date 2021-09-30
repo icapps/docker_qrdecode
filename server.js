@@ -2,8 +2,9 @@
 
 const express = require('express');
 const fileUpload = require('express-fileupload');
-const asyncHandler = require('express-async-handler')
-const spawn = require('await-spawn')
+const asyncHandler = require('express-async-handler');
+const actuator = require('express-actuator');
+const spawn = require('await-spawn');
 
 // Constants
 const PORT = 3000;
@@ -11,6 +12,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
+app.use(actuator());
 
 app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 },
