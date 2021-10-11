@@ -47,7 +47,7 @@ app.post('/qrdecode', asyncHandler(async (req, res) => {
   if( transformed !== data.tempFilePath){
     await spawn('rm', [transformed]);
   }
-  console.log(response);
+  
   res.json(response);
 }
  catch (error) {
